@@ -105,8 +105,8 @@ function showRand3() {
 rand4Btn.addEventListener("click", showRand4);
 
 function showRand4() {
-  let max = parseInt(document.getElementById("rand-in1").value);
-  let min = parseInt(document.getElementById("rand-in2").value);
+  let max = +document.getElementById("rand-in1").value;
+  let min = +document.getElementById("rand-in2").value;
   var rand = Math.random() * (max - min) + min;
   rand = rand.toFixed(3);
   rand4OutEl.innerHTML = rand;
